@@ -6,7 +6,14 @@ const Schema = mongoose.Schema;
 
 const goalSchema = Schema({
 
+    user: {
+        
+       type: mongoose.Schema.Types.ObjectId,
+       required: true,
+       ref: 'User'
 
+
+    },
     text: {
 
 

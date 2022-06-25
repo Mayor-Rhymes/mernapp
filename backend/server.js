@@ -9,6 +9,7 @@ const connectDB = require('./config/db');
 dotenv.config();
 
 const goalRoute = require('./routes/goalRoutes');
+const userRoute = require('./routes/userRoutes');
 
 const port = process.env.PORT || 5000;
 
@@ -35,6 +36,7 @@ app.use((req, res, next) => {
 
 
 app.use('/api/goals', goalRoute);
+app.use('/api/users', userRoute);
 app.use(errorHandler);
 
 
