@@ -4,8 +4,20 @@ import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+import {useSelector} from 'react-redux';
+
 
 function App() {
+
+
+  const {user} = useSelector(state => state.auth);
+
+  console.log(user);
+  // console.log(user?.token);
   return (
       <>
         <Router>
@@ -25,6 +37,7 @@ function App() {
             
           </div>
          </Router>
+         <ToastContainer />
       
       </>
   );

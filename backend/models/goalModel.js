@@ -20,6 +20,6 @@ const goalSchema = Schema({
         type: String,
         required: [true, "Please add a text value"]
     }
-}, {timestamp: true})
+}, {timestamps: true})
 
 module.exports = mongoose.model('Goal', goalSchema);
