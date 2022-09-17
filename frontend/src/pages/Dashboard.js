@@ -28,10 +28,10 @@ function Dashboard() {
      }
      dispatch(getGoals())
 
-     return () => {
+    //  return () => {
 
-      dispatch(reset())
-     }
+    //   dispatch(reset())
+    //  }
   }, [user, navigate, isError, message, dispatch])
 
   if(isLoading){
